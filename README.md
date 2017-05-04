@@ -1,50 +1,31 @@
-# Caffe SegNet
-**This is a modified version of [Caffe](https://github.com/BVLC/caffe) which supports the [SegNet architecture](http://mi.eng.cam.ac.uk/projects/segnet/)**
+Caffe Underwater-color-correction
 
-As described in **SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation** Vijay Badrinarayanan, Alex Kendall and Roberto Cipolla, PAMI 2017 [http://arxiv.org/abs/1511.00561]
+This is a modified version of caffe-SegNet which supports the architecture of underwater color correction network for WaterGAN.
 
-# Updated Version:
-**This version supports cudnn v2 acceleration. @TimoSaemann has a branch supporting a more recent version of Caffe (Dec 2016) with cudnn v5.1:
-https://github.com/TimoSaemann/caffe-segnet-cudnn5**
+This network module provide end-to-end color correction for underwater images, as described in WaterGAN: Unsupervised Generative Network to Enable Real-time Color Correction of Monocular Underwater Images(https://arxiv.org/abs/1702.07392)
+Dataset
 
-## Getting Started with Example Model and Webcam Demo
+    MHL test tank dataset: MHL.tar.gz
+    Jamaica field dataset: Jamaica.tar.gz
 
-If you would just like to try out a pretrained example model, then you can find the model used in the [SegNet webdemo](http://mi.eng.cam.ac.uk/projects/segnet/) and a script to run a live webcam demo here:
-https://github.com/alexgkendall/SegNet-Tutorial
+Net specification
+Training
+Publications
 
-For a more detailed introduction to this software please see the tutorial here:
-http://mi.eng.cam.ac.uk/projects/segnet/tutorial.html
+@article{li2017watergan,
+    author    = {Jie Li, Katherine A. Skinner, Ryan M. Eustice and
+               Matthew Johnson{-}Roberson},
+  title     = {WaterGAN: Unsupervised Generative Network to Enable Real-time Color
+               Correction of Monocular Underwater Images},
+  journal   = {CoRR},
+  volume    = {abs/1702.07392},
+  year      = {2017},
+  url       = {http://arxiv.org/abs/1702.07392},
+  timestamp = {Wed, 01 Mar 2017 14:26:00 +0100},
+  biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/LiSEJ17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}
 
-### Dataset
+License
 
-Prepare a text file of space-separated paths to images (jpegs or pngs) and corresponding label images alternatively e.g. ```/path/to/im1.png /another/path/to/lab1.png /path/to/im2.png /path/lab2.png ...```
-
-Label images must be single channel, with each value from 0 being a separate class. The example net uses an image size of 360 by 480.
-
-### Net specification
-
-Example net specification and solver prototext files are given in examples/segnet.
-To train a model, alter the data path in the ```data``` layers in ```net.prototxt``` to be your dataset.txt file (as described above).
-
-In the last convolution layer, change ```num_output``` to be the number of classes in your dataset.
-
-### Training
-
-In solver.prototxt set a path for ```snapshot_prefix```. Then in a terminal run
-```./build/tools/caffe train -solver ./examples/segnet/solver.prototxt```
-
-## Publications
-
-If you use this software in your research, please cite our publications:
-
-http://arxiv.org/abs/1511.02680
-Alex Kendall, Vijay Badrinarayanan and Roberto Cipolla "Bayesian SegNet: Model Uncertainty in Deep Convolutional Encoder-Decoder Architectures for Scene Understanding." arXiv preprint arXiv:1511.02680, 2015.
-
-http://arxiv.org/abs/1511.00561
-Vijay Badrinarayanan, Alex Kendall and Roberto Cipolla "SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation." PAMI, 2017. 
-
-
-## License
-
-This extension to the Caffe library is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here:
-http://creativecommons.org/licenses/by-nc/4.0/
+This extension to the Caffe library is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here: http://creativecommons.org/licenses/by-nc/4.0/
