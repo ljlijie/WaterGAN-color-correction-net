@@ -1,17 +1,18 @@
-Caffe Underwater-color-correction
+# Caffe Underwater-color-correction
+**This is a modified version of [caffe-SegNet](https://github.com/alexgkendall/caffe-segnet/blob/segnet-cleaned) which supports the architecture of underwater color correction network for [WaterGAN](https://github.com/kskin/WaterGAN).**
 
-This is a modified version of caffe-SegNet which supports the architecture of underwater color correction network for WaterGAN.
+This network module provide end-to-end color correction for underwater images, as described in **WaterGAN: Unsupervised Generative Network to Enable Real-time Color Correction of Monocular Underwater Images**(https://arxiv.org/abs/1702.07392)
 
-This network module provide end-to-end color correction for underwater images, as described in WaterGAN: Unsupervised Generative Network to Enable Real-time Color Correction of Monocular Underwater Images(https://arxiv.org/abs/1702.07392)
-Dataset
+### Dataset
 
-    MHL test tank dataset: MHL.tar.gz
-    Jamaica field dataset: Jamaica.tar.gz
+1) MHL test tank dataset:  [MHL.tar.gz](http://www.umich.edu/~dropopen/MHL.tar.gz)
+2) Jamaica field dataset: [Jamaica.tar.gz](http://www.umich.edu/~dropda/Jamaica.tar.gz)
 
-Net specification
-Training
-Publications
+### Net specification
+### Training
 
+## Publications
+```
 @article{li2017watergan,
     author    = {Jie Li, Katherine A. Skinner, Ryan M. Eustice and
                Matthew Johnson{-}Roberson},
@@ -25,7 +26,8 @@ Publications
   biburl    = {http://dblp.uni-trier.de/rec/bib/journals/corr/LiSEJ17},
   bibsource = {dblp computer science bibliography, http://dblp.org}
 }
+```
+## License
 
-License
-
-This extension to the Caffe library is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here: http://creativecommons.org/licenses/by-nc/4.0/
+This extension to the Caffe library is released under a creative commons license which allows for personal and research use only. For a commercial license please contact the authors. You can view a license summary here:
+http://creativecommons.org/licenses/by-nc/4.0/
