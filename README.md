@@ -7,6 +7,14 @@ This network module provide end-to-end color correction for underwater images, a
 
 1) MHL test tank dataset:  [MHL.tar.gz](http://www.umich.edu/~dropopen/MHL.tar.gz)
 2) Jamaica field dataset: [Jamaica.tar.gz](http://www.umich.edu/~dropda/Jamaica.tar.gz)
+### Model Zoom
+1) MHL test tank  [color-net](http://www.umich.edu/~dropopen/color-correction-mhl.caffemodel.zip)  [depth-net](http://www.umich.edu/~dropopen/depth-estimation-mhl.caffemodel.zip)
+
+1) Jamaica Port Royal [color-net](http://www.umich.edu/~dropopen/color-correction-jamaica.caffemodel.zip)  [depth-net](http://www.umich.edu/~dropopen/depth-estimation-jamaica.caffemodel.zip)
+
+1) Lizard Island [color-net](http://www.umich.edu/~dropopen/color-correction-lizard-island.caffemodel.zip)  [depth-net](http://www.umich.edu/~dropopen/depth-estimation-lizard.caffemodel.zip)
+
+
 
 ### Net specification
 ### Training
